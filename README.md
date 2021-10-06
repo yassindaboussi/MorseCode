@@ -21,21 +21,14 @@ Main App           |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Ressources & Libraries 📚
+## Libraries 📚
 
-| Library | icon |
-| ------ | ------ |
-| JFoenix | [flaticon.com](flaticon.com) |
-| JavaFx | [icones8.fr](icones8.fr) |
+| Library |
+| ------ | 
+| JFoenix |  
 | AnimateFX | 
 | controlsfx | 
-| fontawesomefx | 
-| httpclient | 
-| httpcore | 
-| javafx.mail | 
-| jfoenix | 
-| json-simple | 
-| org.apache.commons.io | 
+| fontawesomefx |  
 | TrayTester | 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
