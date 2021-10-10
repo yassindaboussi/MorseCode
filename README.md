@@ -7,3 +7,33 @@ Morse Code Translator is a translator that lets anyone translate text to Morse c
 Main App           | 
 :---------------------:|
 ![Main App - screenshot](screenshots/Morse.gif)  | 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+## Features
+* [x] Copy The Output 
+* [x] Switch Mode
+* [ ] Add Morse for (Punctuation)
+* [ ] Add file txt (to Translate it)
+* [ ] Save The Output (in txt)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Libraries 📚
+
+| Library |
+| ------ | 
+| JFoenix |  
+| AnimateFX | 
+| controlsfx | 
+| fontawesomefx |  
+| TrayTester | 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Contributing 💡
+If you want to contribute to this project and make it better with new ideas, your pull request is very welcomed.😊😇
+
+<p align="right">(<a href="#top">back to top</a>)</p>
