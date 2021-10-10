@@ -50,6 +50,9 @@ import javafx.util.Duration;
 import animatefx.animation.FadeInUp;
 import animatefx.animation.FadeOut;
 import animatefx.animation.Shake;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 
 /**
  * FXML Controller class
@@ -104,6 +107,9 @@ public class MorseCodeController implements Initializable {
     private MaterialDesignIconView facebook;
     @FXML
     private MaterialDesignIconView youtube;
+
+    File file = new File(System.getProperty("user.home") + "/Desktop/saveMorse.txt");
+    Desktop desktop = Desktop.getDesktop();
 
     /**
      * Initializes the controller class.
@@ -161,13 +167,13 @@ public class MorseCodeController implements Initializable {
     Map<Character, String> mapping = new HashMap<Character, String>();
 
     char[] letter = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
-        'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ' '};
+        'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ' ', '.', ',', '?', '!', '/', '(', ')', '&', ':', ';', '=', '+', '-', '_', '"', '$', '@', '¿', '¡'};
 
     String[] morse = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..",
         ".---", "-.-", ".-..", "--", "-.", "---", ".---.", "--.-", ".-.",
         "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".----",
         "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.",
-        "-----", "/"};
+        "-----", "/", ".-.-.-", "--..--", "..--..", "-.-.--", "-..-.", "-.--.", "-.--.-", ".-...", "---...", "-.-.-.", "-...-", ".-.-.", "-....-", "..--.-", ".-..-.", "...-..-", ".--.-.", "..-.-", "--...-"};
 
     public MorseCodeController() {
         setupMap();
@@ -347,6 +353,45 @@ public class MorseCodeController implements Initializable {
 
     public static void shake(Node node) {
         new Shake(node).play();
+    }
+
+    public void SAVE() {      //Save the UserName and Password (for one user)
+        try {
+            if (!file.exists()) {
+                file.createNewFile();  //if the file !exist create a new one
+            }
+            BufferedWriter bw = new BufferedWriter(new FileWriter(file.getAbsolutePath()));
+            bw.write("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+            bw.newLine(); //leave a new Line
+            bw.write("This file is on your desktop (SaveMorse.txt)"); //write the Morse Text
+            bw.newLine(); //leave a new Line
+            bw.write("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+            bw.newLine(); //leave a new Line
+            bw.write("Morse TexT : " + txtMorseText.getText()); //write the Morse Text
+            bw.newLine(); //leave a new Line
+            bw.write("Morse Code : " + txtMorseCode.getText()); //write the Morse Code
+            bw.newLine(); //leave a new Line
+            bw.write("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+            bw.newLine(); //leave a new Line
+            bw.write("Email : Yassin.daboussi@esprit.tn && facebook : yassdaboussi"); //write the Morse Text
+            bw.newLine(); //leave a new Line
+            bw.write("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+            bw.close(); //close the BufferdWriter
+
+            if (file.exists()) //checks file exists or not  
+            {
+                desktop.open(file); //opens the specified file   
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }//End Of Save
+
+    @FXML
+    private void SaveTheOutPut(MouseEvent event) {
+        SAVE();
     }
 
 }
