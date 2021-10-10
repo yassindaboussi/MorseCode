@@ -3,10 +3,10 @@
 
 Morse Code Translator is a translator that lets anyone translate text to Morse code  easily. With the Morse code translator, anyone can convert any plain text  to Morse code.<br/>
 
-## Screenshots
-Main App           | 
-:---------------------:|
-![Main App - screenshot](screenshots/Morse.gif)  | 
+## Screenshots    
+Main App           | Save Result
+:---------------------:|:------------------:
+![Main App - screenshot](screenshots/Morse.gif)  | ![Save Result - screenshoot](screenshots/SaveTotxt.gif)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -15,9 +15,9 @@ Main App           |
 ## Features
 * [x] Copy The Output 
 * [x] Switch Mode
-* [ ] Add Morse for (Punctuation)
+* [x] Add Morse for (Punctuation)
 * [ ] Add file txt (to Translate it)
-* [ ] Save The Output (in txt)
+* [x] Save The Output (in txt)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
